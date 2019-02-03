@@ -1,0 +1,63 @@
+{
+  "name": "mm-ts-utils",
+  "version": "1.0.0",
+  "description": "Ongoing collection of various personal TypeScript common utils...",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "build": "npm run clean && tsc",
+    "test": "NODE_ENV=testing jest --watch --runInBand",
+    "prettier": "prettier --single-quote --trailing-comma es5 --tab-width 4 --arrow-parens always --write 'src/**/*.{js,jsx,ts,tsx,scss,json}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianmeres/mm-ts-utils.git"
+  },
+  "author": "Marian Meres <marian@meres.sk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianmeres/mm-ts-utils/issues"
+  },
+  "homepage": "https://github.com/marianmeres/mm-ts-utils#readme",
+  "dependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/lodash": "^4.14.120",
+    "dotenv": "^6.2.0",
+    "jest": "^23.5.0",
+    "lodash": "^4.17.11",
+    "lodash-es": "^4.17.11",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1"
+  },
+  "jest": {
+    "verbose": false,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!lodash-es/.*)"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.(ts|tsx|js|jsx)",
+      "**/?(*.)(spec|test).(ts|tsx|js|jsx)"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      },
+      "__TESTING__": true
+    }
+  }
+}
