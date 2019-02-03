@@ -1,9 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * inspiration: https://github.com/klughammer/node-randomstring
  * @param options
  * @returns {string}
  */
-export function mmGetRandomStr(options) {
+function mmGetRandomStr(options) {
     options = Object.assign({
         length: 8,
         charset: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
@@ -33,3 +35,4 @@ export function mmGetRandomStr(options) {
     }
     return prefix + out;
 }
+exports.mmGetRandomStr = mmGetRandomStr;

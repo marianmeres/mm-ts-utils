@@ -1,3 +1,4 @@
+"use strict";
 // id: a unique identifier for this particular occurrence of the problem.
 //     links: a links object containing the following members:
 //          about: a link that leads to further details about this particular
@@ -15,7 +16,8 @@
 //          for a specific attribute].
 // parameter: a string indicating which URI query parameter caused the error.
 //     meta
-export const createJSONApiEnvelope = () => ({
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createJSONApiEnvelope = () => ({
     data: null,
     included: [],
     meta: {},

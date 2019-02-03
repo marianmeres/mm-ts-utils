@@ -8,11 +8,11 @@
         "**/__tests__/*.*"
     ],
     "compilerOptions": {
-        "allowJs": false,
-        "declaration": true,
+        "allowJs": true,
+//        "declaration": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": false,
-        "module": "esnext",
+        "module": "commonjs",
         "moduleResolution": "node",
         "noImplicitAny": false,
         "noImplicitReturns": true,

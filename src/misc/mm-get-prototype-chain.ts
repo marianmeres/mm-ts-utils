@@ -1,5 +1,5 @@
-// import isPlainObject from 'lodash-es/isPlainObject';
-import { isPlainObject } from 'lodash';
+import isPlainObject from 'lodash-es/isPlainObject';
+// import { isPlainObject } from 'lodash';
 
 /**
  * hm...q

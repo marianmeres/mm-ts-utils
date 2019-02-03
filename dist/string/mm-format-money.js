@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * credit: somewhere I don't remember...
  * @param amount
@@ -6,7 +8,7 @@
  * @param thousandSeparator
  * @returns {string}
  */
-export function mmFormatMoney(amount, decimalsCount = 2, decimalSeparator = '.', thousandSeparator = ' ') {
+function mmFormatMoney(amount, decimalsCount = 2, decimalSeparator = '.', thousandSeparator = ' ') {
     let n = amount;
     let c = decimalsCount;
     let d = decimalSeparator;
@@ -28,3 +30,4 @@ export function mmFormatMoney(amount, decimalsCount = 2, decimalSeparator = '.',
                     .slice(2)
             : ''));
 }
+exports.mmFormatMoney = mmFormatMoney;

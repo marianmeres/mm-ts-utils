@@ -1,8 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * @param len
  * @param prefix
  */
-export function mmGetRandomAlphaNumStr(len, prefix = '') {
+function mmGetRandomAlphaNumStr(len, prefix = '') {
     let salt = '';
     while (salt.length < len) {
         salt += Math.random()
@@ -11,3 +13,4 @@ export function mmGetRandomAlphaNumStr(len, prefix = '') {
     }
     return (prefix || '') + salt.substr(0, len);
 }
+exports.mmGetRandomAlphaNumStr = mmGetRandomAlphaNumStr;

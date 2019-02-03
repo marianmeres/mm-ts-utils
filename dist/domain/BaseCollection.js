@@ -1,6 +1,11 @@
-// import find from 'lodash-es/find';
-import { find } from 'lodash';
-export default class BaseCollection {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const find_1 = __importDefault(require("lodash-es/find"));
+// import { find } from 'lodash';
+class BaseCollection {
     /**
      * @param {any[]} items
      */
@@ -44,6 +49,7 @@ export default class BaseCollection {
         const attrKeys = Object.keys(attributes);
         const isWhereMatch = (item) => attrKeys.length ===
             attrKeys.reduce((acc, key) => (acc += item[key] === attributes[key] ? 1 : 0), 0);
-        return find(this._items, isWhereMatch);
+        return find_1.default(this._items, isWhereMatch);
     }
 }
+exports.default = BaseCollection;

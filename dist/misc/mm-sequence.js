@@ -1,4 +1,6 @@
-export const mmSequence = (() => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmSequence = (() => {
     let _counters = {};
     return (prefix) => {
         let _prefix = `_${prefix}`;

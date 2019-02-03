@@ -1,6 +1,8 @@
-import { mmIsValidDate } from './mm-is-valid-date';
-import { mmEscapeRegExp } from '../string/mm-escape-regex';
-export class MMDateFormatter {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const mm_is_valid_date_1 = require("./mm-is-valid-date");
+const mm_escape_regex_1 = require("../string/mm-escape-regex");
+class MMDateFormatter {
     /**
      * @param _date
      * @param locale
@@ -32,7 +34,7 @@ export class MMDateFormatter {
      * @param i18n
      */
     static format(date, mask, locale = 'en', utc = false, i18n) {
-        if (!mmIsValidDate(date)) {
+        if (!mm_is_valid_date_1.mmIsValidDate(date)) {
             throw new Error(`Invalid date ${date}`);
         }
         if (!MMDateFormatter.i18n[locale]) {
@@ -134,7 +136,7 @@ export class MMDateFormatter {
         const patterns = [];
         const keys = Object.keys(replaceMap);
         keys.sort().reverse(); // sort desc, hm...
-        keys.forEach((k) => patterns.push(mmEscapeRegExp(k)));
+        keys.forEach((k) => patterns.push(mm_escape_regex_1.mmEscapeRegExp(k)));
         const rgx = new RegExp(patterns.join('|'), 'g');
         return mask.replace(rgx, ($0) => {
             return $0 in replaceMap ? replaceMap[$0]() : '';
@@ -221,10 +223,10 @@ export class MMDateFormatter {
      * @param i18n
      */
     static from(date, compareTo, locale = 'en', i18n) {
-        if (!mmIsValidDate(date)) {
+        if (!mm_is_valid_date_1.mmIsValidDate(date)) {
             throw new Error(`Invalid 'date' date`);
         }
-        if (!mmIsValidDate(compareTo)) {
+        if (!mm_is_valid_date_1.mmIsValidDate(compareTo)) {
             throw new Error(`Invalid 'compareTo' date`);
         }
         if (!MMDateFormatter.i18n[locale]) {
@@ -299,3 +301,4 @@ MMDateFormatter.i18n = {
         }
     },
 };
+exports.MMDateFormatter = MMDateFormatter;

@@ -1,7 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Nothing fancy, just basic calculations.
  */
-export class MmPaginator {
+class MmPaginator {
     constructor(itemsTotal, itemsPerPage = 10, currentPage = 1) {
         this._itemsPerPage = 10;
         this._currentPage = 1;
@@ -115,3 +117,4 @@ export class MmPaginator {
         };
     }
 }
+exports.MmPaginator = MmPaginator;

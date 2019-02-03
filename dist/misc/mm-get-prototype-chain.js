@@ -1,11 +1,16 @@
-// import isPlainObject from 'lodash-es/isPlainObject';
-import { isPlainObject } from 'lodash';
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const isPlainObject_1 = __importDefault(require("lodash-es/isPlainObject"));
+// import { isPlainObject } from 'lodash';
 /**
  * hm...q
  * @param obj
  * @returns {any}
  */
-export const mmGetPrototypeChain = (obj) => {
+exports.mmGetPrototypeChain = (obj) => {
     if (obj === null) {
         return null;
     }
@@ -14,7 +19,7 @@ export const mmGetPrototypeChain = (obj) => {
     }
     let proto = Object.getPrototypeOf(obj);
     let out = [];
-    while (!isPlainObject(proto)) {
+    while (!isPlainObject_1.default(proto)) {
         out.push(proto);
         proto = Object.getPrototypeOf(proto);
     }

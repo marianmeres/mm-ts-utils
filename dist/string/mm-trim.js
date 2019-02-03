@@ -1,10 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * http://locutus.io/php/trim/
  * @param str
  * @param charlist
  * @returns {string}
  */
-export function mmTrim(str, charlist) {
+function mmTrim(str, charlist) {
     // prettier-ignore
     let whitespace = [
         ' ', '\n', '\r', '\t', '\f', '\x0b', '\xa0', '\u2000', '\u2001', '\u2002',
@@ -33,3 +35,4 @@ export function mmTrim(str, charlist) {
     }
     return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
 }
+exports.mmTrim = mmTrim;

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * http://www.jacklmoore.com/notes/rounding-in-javascript/
  * Rounding Errors
@@ -17,18 +19,20 @@
  * @param decimals
  * @returns {Number}
  */
-export function mmRound(value, decimals = 0) {
+function mmRound(value, decimals = 0) {
     return Number(Math.round((value + 'e' + decimals)) + 'e-' + decimals);
 }
+exports.mmRound = mmRound;
 /**
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
  * @param num
  * @param precision
  * @returns {number}
  */
-export function mmRound2(num, precision = 0) {
+function mmRound2(num, precision = 0) {
     let factor = Math.pow(10, precision);
     let tempNumber = num * factor;
     let roundedTempNumber = Math.round(tempNumber);
     return roundedTempNumber / factor;
 }
+exports.mmRound2 = mmRound2;

@@ -1,10 +1,16 @@
-import { mmGetPrototypeChain } from '../misc/mm-get-prototype-chain';
-import { isEqual, isPlainObject } from 'lodash';
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const isEqual_1 = __importDefault(require("lodash-es/isEqual"));
+const isPlainObject_1 = __importDefault(require("lodash-es/isPlainObject"));
+const mm_get_prototype_chain_1 = require("../misc/mm-get-prototype-chain");
 const isString = (v) => typeof v === 'string';
 /**
  *
  */
-export class BaseModel {
+class BaseModel {
     /**
      * @param data
      * @param {boolean} forceDirty
@@ -78,7 +84,7 @@ export class BaseModel {
         // NEW FEATURE: all plain object values are serialized/stringified
         // automatically (handly for JSONB types)
         return Object.keys(json).reduce((memo, k) => {
-            if (isPlainObject(json[k])) {
+            if (isPlainObject_1.default(json[k])) {
                 memo[k] = BaseModel.JSONStringify(json[k]);
             }
             else {
@@ -126,7 +132,7 @@ export class BaseModel {
      * @private
      */
     _hasSetterFor(k) {
-        const chain = mmGetPrototypeChain(this);
+        const chain = mm_get_prototype_chain_1.mmGetPrototypeChain(this);
         if (Array.isArray(chain)) {
             return chain.some((proto) => {
                 let desc = Object.getOwnPropertyDescriptor(proto, k);
@@ -141,7 +147,7 @@ export class BaseModel {
      * @private
      */
     _hasGetterFor(k) {
-        const chain = mmGetPrototypeChain(this);
+        const chain = mm_get_prototype_chain_1.mmGetPrototypeChain(this);
         if (Array.isArray(chain)) {
             return chain.some((proto) => {
                 let desc = Object.getOwnPropertyDescriptor(proto, k);
@@ -211,7 +217,7 @@ export class BaseModel {
     _maybeMarkKeyDirty(k, oldRawValue) {
         let newRawValue = this._data[k];
         // if (oldRawValue !== newRawValue && -1 === this._dirtyKeys.indexOf(k)) {
-        if (!isEqual(oldRawValue, newRawValue) &&
+        if (!isEqual_1.default(oldRawValue, newRawValue) &&
             -1 === this._dirtyKeys.indexOf(k)) {
             this._dirtyKeys.push(k);
         }
@@ -294,3 +300,4 @@ export class BaseModel {
         return val;
     }
 }
+exports.BaseModel = BaseModel;

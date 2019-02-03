@@ -1,7 +1,10 @@
-import { mmIsSameDay } from './mm-is-same-day';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const mm_is_same_day_1 = require("./mm-is-same-day");
 /**
  * @param d
  */
-export function mmIsToday(d) {
-    return mmIsSameDay(d, new Date());
+function mmIsToday(d) {
+    return mm_is_same_day_1.mmIsSameDay(d, new Date());
 }
+exports.mmIsToday = mmIsToday;

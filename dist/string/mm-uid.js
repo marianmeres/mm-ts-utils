@@ -1,9 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * creates quasi uuid
  * http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
  * @returns {string}
  */
-export function mmUid(length) {
+function mmUid(length) {
     let s4 = () => Math.floor((1 + Math.random()) * 0x10000)
         .toString(16)
         .substring(1)
@@ -20,3 +22,4 @@ export function mmUid(length) {
     }
     return out.substr(0, length);
 }
+exports.mmUid = mmUid;
