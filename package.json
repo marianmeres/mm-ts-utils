@@ -15,7 +15,7 @@
     "url": "git+https://github.com/marianmeres/mm-ts-utils.git"
   },
   "author": "Marian Meres <marian@meres.sk>",
-  "license": "ISC",
+  "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/marianmeres/mm-ts-utils/issues"
   },
