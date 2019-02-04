@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {*}
  */
 function mmShuffle(array) {
-    let counter = array.length;
-    let temp;
-    let index;
+    var counter = array.length;
+    var temp;
+    var index;
     // While there are elements in the array
     while (counter > 0) {
         // Pick a random index (between 0 and last)

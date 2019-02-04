@@ -8,13 +8,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 function mmTrim(str, charlist) {
     // prettier-ignore
-    let whitespace = [
+    var whitespace = [
         ' ', '\n', '\r', '\t', '\f', '\x0b', '\xa0', '\u2000', '\u2001', '\u2002',
         '\u2003', '\u2004', '\u2005', '\u2006', '\u2007', '\u2008', '\u2009',
         '\u200a', '\u200b', '\u2028', '\u2029', '\u3000',
     ].join('');
-    let l = 0;
-    let i = 0;
+    var l = 0;
+    var i = 0;
     str += '';
     if (charlist) {
         whitespace = (charlist + '').replace(/([[\]().?/*{}+$^:])/g, '$1');

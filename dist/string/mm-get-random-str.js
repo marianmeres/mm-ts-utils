@@ -13,7 +13,7 @@ function mmGetRandomStr(options) {
         unique: false,
         prefix: '',
     }, options || {});
-    let { length, charset, readable, unique, prefix } = options;
+    var length = options.length, charset = options.charset, readable = options.readable, unique = options.unique, prefix = options.prefix;
     // sanity
     if (isNaN(length) || length < 1 || length > 1024) {
         throw new Error('Invalid length');
@@ -29,7 +29,7 @@ function mmGetRandomStr(options) {
         // so to keep it quiet:
         charset = Array.from(new Set(charset)).join('');
     }
-    let out = '';
+    var out = '';
     while (length--) {
         out += charset.charAt(Math.floor(Math.random() * charset.length));
     }

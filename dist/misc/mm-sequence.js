@@ -1,24 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mmSequence = (() => {
-    let _counters = {};
-    return (prefix) => {
-        let _prefix = `_${prefix}`;
-        const seq = {
-            reset: () => {
+exports.mmSequence = (function () {
+    var _counters = {};
+    return function (prefix) {
+        var _prefix = "_" + prefix;
+        var seq = {
+            reset: function () {
                 delete _counters[_prefix];
                 return seq;
             },
-            current: () => {
+            current: function () {
                 _counters[_prefix] = _counters[_prefix] || 0;
                 return prefix
-                    ? `${prefix}${_counters[_prefix]}`
+                    ? "" + prefix + _counters[_prefix]
                     : _counters[_prefix];
             },
-            next: () => {
+            next: function () {
                 _counters[_prefix] = _counters[_prefix] || 0;
-                let i = ++_counters[_prefix];
-                return prefix ? `${prefix}${i}` : i;
+                var i = ++_counters[_prefix];
+                return prefix ? "" + prefix + i : i;
             },
         };
         return seq;

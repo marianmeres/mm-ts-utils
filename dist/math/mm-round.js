@@ -19,7 +19,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @param decimals
  * @returns {Number}
  */
-function mmRound(value, decimals = 0) {
+function mmRound(value, decimals) {
+    if (decimals === void 0) { decimals = 0; }
     return Number(Math.round((value + 'e' + decimals)) + 'e-' + decimals);
 }
 exports.mmRound = mmRound;
@@ -29,10 +30,11 @@ exports.mmRound = mmRound;
  * @param precision
  * @returns {number}
  */
-function mmRound2(num, precision = 0) {
-    let factor = Math.pow(10, precision);
-    let tempNumber = num * factor;
-    let roundedTempNumber = Math.round(tempNumber);
+function mmRound2(num, precision) {
+    if (precision === void 0) { precision = 0; }
+    var factor = Math.pow(10, precision);
+    var tempNumber = num * factor;
+    var roundedTempNumber = Math.round(tempNumber);
     return roundedTempNumber / factor;
 }
 exports.mmRound2 = mmRound2;

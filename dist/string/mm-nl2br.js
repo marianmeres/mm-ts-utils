@@ -6,6 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {string}
  */
 function mmNl2br(str) {
-    return `${str}`.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br/>$2');
+    return ("" + str).replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br/>$2');
 }
 exports.mmNl2br = mmNl2br;

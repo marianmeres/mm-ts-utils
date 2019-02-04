@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const mm_is_valid_date_1 = require("./mm-is-valid-date");
+var mm_is_valid_date_1 = require("./mm-is-valid-date");
 /**
  * @param d1
  * @param d2

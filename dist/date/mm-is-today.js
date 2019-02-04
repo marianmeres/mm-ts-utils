@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const mm_is_same_day_1 = require("./mm-is-same-day");
+var mm_is_same_day_1 = require("./mm-is-same-day");
 /**
  * @param d
  */

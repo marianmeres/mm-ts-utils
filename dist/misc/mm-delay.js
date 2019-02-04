@@ -3,6 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * @param ms
  */
-exports.mmDelay = (ms) => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+exports.mmDelay = function (ms) {
+    return new Promise(function (resolve) { return setTimeout(resolve, ms); });
 };

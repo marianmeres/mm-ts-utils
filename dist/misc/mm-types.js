@@ -17,8 +17,8 @@
 // parameter: a string indicating which URI query parameter caused the error.
 //     meta
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createJSONApiEnvelope = () => ({
+exports.createJSONApiEnvelope = function () { return ({
     data: null,
     included: [],
     meta: {},
-});
+}); };
