@@ -8,8 +8,8 @@
         "**/__tests__/*.*"
     ],
     "compilerOptions": {
-        "allowJs": true,
-//        "declaration": true,
+        "allowJs": false,
+        "declaration": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": false,
         "module": "commonjs",
