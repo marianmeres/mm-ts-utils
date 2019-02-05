@@ -24,6 +24,7 @@ export * from './string/mm-get-random-alpha-num-str';
 export * from './string/mm-get-random-str';
 export * from './string/mm-hash-code';
 export * from './string/mm-nl2br';
+export * from './string/mm-parse-query';
 export * from './string/mm-replace-map';
 export * from './string/mm-trim';
 export * from './string/mm-ucfirst';

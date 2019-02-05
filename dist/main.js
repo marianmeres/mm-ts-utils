@@ -29,6 +29,7 @@ __export(require("./string/mm-get-random-alpha-num-str"));
 __export(require("./string/mm-get-random-str"));
 __export(require("./string/mm-hash-code"));
 __export(require("./string/mm-nl2br"));
+__export(require("./string/mm-parse-query"));
 __export(require("./string/mm-replace-map"));
 __export(require("./string/mm-trim"));
 __export(require("./string/mm-ucfirst"));
