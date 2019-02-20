@@ -323,6 +323,33 @@ var MMDateFormatter = /** @class */ (function () {
                 s: function (v, isPast) { return isPast ? "pred p\u00E1r sekundami" : "za p\u00E1r sek\u00FAnd"; },
             }
         },
+        cs: {
+            shortDayNames: ['Ned', 'Pon', 'Úte', 'Stř', 'Čtv', 'Pát', 'Sob'],
+            longDayNames: [
+                'Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota',
+            ],
+            shortMonthNames: [
+                'Led', 'Úno', 'Bře', 'Dub', 'Kvě', 'Čer',
+                'Červ', 'Srp', 'Zář', 'Říj', 'Lis', 'Pro',
+            ],
+            longMonthNames: [
+                'Leden', 'Únor', 'Březen', 'Duben', 'Květen', 'Červen',
+                'Červenec', 'Srpen', 'Září', 'Říjen', 'Listopad', 'Prosinec',
+            ],
+            relative: {
+                yy: function (v, isPast) { return isPast ? "p\u0159ed " + v + " roky" : "za " + v + " rok" + (v < 5 ? 'y' : 'ů'); },
+                y: function (v, isPast) { return isPast ? "p\u0159ed rokem" : "za rok"; },
+                MM: function (v, isPast) { return isPast ? "p\u0159ed " + v + " m\u011Bs\u00EDci" : "za " + v + " m\u011Bs\u00EDc" + (v < 5 ? 'e' : 'ů'); },
+                M: function (v, isPast) { return isPast ? "p\u0159ed m\u011Bs\u00EDcem" : "za m\u011Bs\u00EDc"; },
+                dd: function (v, isPast) { return isPast ? "p\u0159ed " + v + " dny" : "za " + v + " dn" + (v < 5 ? 'y' : 'í'); },
+                d: function (v, isPast) { return isPast ? "v\u010Dera" : "z\u00EDtra"; },
+                hh: function (v, isPast) { return isPast ? "p\u0159ed " + v + " hodinami" : "za " + v + " hod" + (v < 5 ? 'iny' : 'in'); },
+                h: function (v, isPast) { return isPast ? "p\u0159ed hodinou" : "za hodinu"; },
+                mm: function (v, isPast) { return isPast ? "p\u0159ed " + v + " minutami" : "za " + v + " minut" + (v < 5 ? 'y' : ''); },
+                m: function (v, isPast) { return isPast ? "p\u0159ed minutou" : "za minutu"; },
+                s: function (v, isPast) { return isPast ? "p\u0159ed p\u00E1r sekundami" : "za p\u00E1r sekund"; },
+            }
+        },
     };
     return MMDateFormatter;
 }());

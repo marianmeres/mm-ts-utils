@@ -89,6 +89,33 @@ export class MMDateFormatter {
                 s: (v, isPast)  => isPast ? `pred pár sekundami` : `za pár sekúnd`,
             }
         },
+        cs: {
+            shortDayNames: ['Ned', 'Pon', 'Úte', 'Stř', 'Čtv', 'Pát', 'Sob'],
+            longDayNames: [
+                'Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota',
+            ],
+            shortMonthNames: [
+                'Led', 'Úno', 'Bře', 'Dub', 'Kvě', 'Čer',
+                'Červ', 'Srp', 'Zář', 'Říj', 'Lis', 'Pro',
+            ],
+            longMonthNames: [
+                'Leden', 'Únor', 'Březen', 'Duben', 'Květen', 'Červen',
+                'Červenec', 'Srpen', 'Září', 'Říjen', 'Listopad', 'Prosinec',
+            ],
+            relative: {
+                yy: (v, isPast) => isPast ? `před ${v} roky`     : `za ${v} rok${v < 5 ? 'y' : 'ů'}`,
+                y: (v, isPast)  => isPast ? `před rokem`         : `za rok`,
+                MM: (v, isPast) => isPast ? `před ${v} měsíci`   : `za ${v} měsíc${v < 5 ? 'e' : 'ů'}`,
+                M: (v, isPast)  => isPast ? `před měsícem`       : `za měsíc`,
+                dd: (v, isPast) => isPast ? `před ${v} dny`      : `za ${v} dn${v < 5 ? 'y' : 'í' }`,
+                d: (v, isPast)  => isPast ? `včera`              : `zítra`,
+                hh: (v, isPast) => isPast ? `před ${v} hodinami` : `za ${v} hod${v < 5 ? 'iny' : 'in'}`,
+                h: (v, isPast)  => isPast ? `před hodinou`       : `za hodinu`,
+                mm: (v, isPast) => isPast ? `před ${v} minutami` : `za ${v} minut${v < 5 ? 'y' : ''}`,
+                m: (v, isPast)  => isPast ? `před minutou`       : `za minutu`,
+                s: (v, isPast)  => isPast ? `před pár sekundami` : `za pár sekund`,
+            }
+        },
     };
 
     /**

@@ -233,3 +233,13 @@ test('relative: localize test', () => {
     // expect({ type, value }).toEqual({ type: 'm', value: 1 });
     expect(localized).toEqual('pred 2 minútami');
 });
+
+test.only('cs local sanity check', () => {
+    let { type, value, details, isPast, localized } = MMDateFormatter.from(
+        new Date('2000-01-01'),
+        new Date('2000-01-27'),
+        'cs'
+    );
+
+    expect(localized).toEqual('před měsícem');
+});
