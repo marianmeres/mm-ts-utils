@@ -234,7 +234,7 @@ test('relative: localize test', () => {
     expect(localized).toEqual('pred 2 minútami');
 });
 
-test.only('cs local sanity check', () => {
+test('cs local sanity check', () => {
     let { type, value, details, isPast, localized } = MMDateFormatter.from(
         new Date('2000-01-01'),
         new Date('2000-01-27'),
