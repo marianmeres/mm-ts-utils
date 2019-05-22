@@ -76,7 +76,6 @@ var BaseModel = /** @class */ (function () {
     });
     Object.defineProperty(BaseModel.prototype, "_defaults", {
         /**
-         * @returns {BaseModelData}
          * @private
          */
         get: function () {
@@ -87,7 +86,7 @@ var BaseModel = /** @class */ (function () {
         configurable: true
     });
     /**
-     * @returns {BaseModelData}
+     *
      */
     BaseModel.prototype.toJSON = function () {
         var _this = this;
@@ -99,7 +98,6 @@ var BaseModel = /** @class */ (function () {
     /**
      * defaultne to iste co `toJSON` akurat povolujeme custom override pre special case-y
      * (serializovanie non-primitivov do DB)
-     * @returns {BaseModelData}
      */
     BaseModel.prototype.toJSONSerialized = function () {
         var json = this.toJSON();
@@ -119,7 +117,7 @@ var BaseModel = /** @class */ (function () {
     /**
      * "over the wire" attributes filter hook
      * @param options
-     * @returns {BaseModelData}
+     * @param options
      * @private
      */
     BaseModel.prototype._toJSONApiAttributes = function (options) {

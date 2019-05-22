@@ -2,7 +2,7 @@ import { mmIsValidDate } from './mm-is-valid-date';
 import { mmEscapeRegExp } from '../string/mm-escape-regex';
 
 /**
- * Initialy insired from:
+ * Initialy inspired from:
  * Date Format 1.2.3, (c) 2007-2009 Steven Levithan <stevenlevithan.com>
  * http://blog.stevenlevithan.com/archives/date-time-format
  */
