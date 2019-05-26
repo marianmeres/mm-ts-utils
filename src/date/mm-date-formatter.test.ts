@@ -179,6 +179,16 @@ test('relative: h (45 to 89 minutes)', () => {
     expect(localized).toEqual('an hour ago');
 });
 
+test('relative: h (45 to 89 minutes) 2', () => {
+    let { type, value, details, isPast, localized } = MMDateFormatter.from(
+        new Date('2019-05-26 08:48:36'),
+        new Date('2019-05-26 10:33:27'),
+        'sk'
+    );
+    // expect({ type, value }).toEqual({ type: 'h', value: 1 });
+    expect(localized).toEqual('pred 2 hodinami');
+});
+
 test('relative: mm (90 seconds to 44 minutes)', () => {
     let { type, value, details, isPast, localized } = MMDateFormatter.from(
         new Date('2000-01-01 01:40:00'),
