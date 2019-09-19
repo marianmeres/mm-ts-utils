@@ -8,7 +8,7 @@
     "clean": "rimraf dist/*",
     "build": "npm run clean && tsc",
     "test": "cross-env NODE_ENV=test jest --watch --runInBand",
-    "prettier": "prettier --single-quote --trailing-comma es5 --tab-width 4 --arrow-parens always --write 'src/**/*.{js,jsx,ts,tsx,scss,json}'"
+    "prettier": "prettier --print-width 90 --single-quote --trailing-comma es5 --tab-width 4 --arrow-parens always --write \"{src,scripts}/**/*.{js,jsx,ts,tsx,scss}\""
   },
   "repository": {
     "type": "git",

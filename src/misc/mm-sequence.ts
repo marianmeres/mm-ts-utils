@@ -11,9 +11,7 @@ export const mmSequence = (() => {
             },
             current: (): number | string => {
                 _counters[_prefix] = _counters[_prefix] || 0;
-                return prefix
-                    ? `${prefix}${_counters[_prefix]}`
-                    : _counters[_prefix];
+                return prefix ? `${prefix}${_counters[_prefix]}` : _counters[_prefix];
             },
             next: (): number | string => {
                 _counters[_prefix] = _counters[_prefix] || 0;

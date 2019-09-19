@@ -70,10 +70,7 @@ test('format works', () => {
 });
 
 test('locale works', () => {
-    const df = new MMDateFormatter(
-        new Date('1984-01-02T03:04:05.678+0100'),
-        'sk'
-    );
+    const df = new MMDateFormatter(new Date('1984-01-02T03:04:05.678+0100'), 'sk');
     expect(
         df.format(
             'A,D,DD,H,HH,M,MM,MMM,MMMM,SSS,YY,YYYY,Z,ZZ,a,d,dd,ddd,dddd,h,hh,m,mm,s,ss'
@@ -84,10 +81,7 @@ test('locale works', () => {
 });
 
 test('custom locale overrides', () => {
-    const df = new MMDateFormatter(
-        new Date('1984-01-02T03:04:05.678+0100'),
-        'sk'
-    );
+    const df = new MMDateFormatter(new Date('1984-01-02T03:04:05.678+0100'), 'sk');
     expect(
         df.format('MMM,MMMM,ddd,dddd', false, {
             shortDayNames: 'a,b,c,d,e,f,g'.split(','),

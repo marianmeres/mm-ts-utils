@@ -242,8 +242,7 @@ var BaseModel = /** @class */ (function () {
     BaseModel.prototype._maybeMarkKeyDirty = function (k, oldRawValue) {
         var newRawValue = this._data[k];
         // if (oldRawValue !== newRawValue && -1 === this._dirtyKeys.indexOf(k)) {
-        if (!isEqual_1.default(oldRawValue, newRawValue) &&
-            -1 === this._dirtyKeys.indexOf(k)) {
+        if (!isEqual_1.default(oldRawValue, newRawValue) && -1 === this._dirtyKeys.indexOf(k)) {
             this._dirtyKeys.push(k);
         }
         return this;
@@ -325,8 +324,7 @@ var BaseModel = /** @class */ (function () {
             return obj && Object.keys(obj).length === 0 && obj.constructor === Object;
         };
         val = JSON.stringify(val);
-        if (val === void 0 ||
-            val === 'null' /*|| val === '{}' || isEmptyObject(val)*/) {
+        if (val === void 0 || val === 'null' /*|| val === '{}' || isEmptyObject(val)*/) {
             val = null;
         }
         return val;

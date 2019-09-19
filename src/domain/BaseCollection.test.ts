@@ -9,12 +9,8 @@ const musketeersData = [
 
 test('`indexOf` works', () => {
     let friends = new BaseCollection(musketeersData);
-    let indexOfFirstMusketeer = friends.indexOf(
-        friends.findWhere({ job: 'Musketeer' })
-    );
-    let indexOfFirstGuard = friends.indexOf(
-        friends.findWhere({ job: 'Guard' })
-    );
+    let indexOfFirstMusketeer = friends.indexOf(friends.findWhere({ job: 'Musketeer' }));
+    let indexOfFirstGuard = friends.indexOf(friends.findWhere({ job: 'Guard' }));
 
     expect(indexOfFirstMusketeer).toEqual(0);
     expect(indexOfFirstGuard).toEqual(3);

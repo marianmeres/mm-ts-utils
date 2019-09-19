@@ -11,9 +11,7 @@ exports.mmSequence = (function () {
             },
             current: function () {
                 _counters[_prefix] = _counters[_prefix] || 0;
-                return prefix
-                    ? "" + prefix + _counters[_prefix]
-                    : _counters[_prefix];
+                return prefix ? "" + prefix + _counters[_prefix] : _counters[_prefix];
             },
             next: function () {
                 _counters[_prefix] = _counters[_prefix] || 0;

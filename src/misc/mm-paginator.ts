@@ -6,11 +6,7 @@ export class MmPaginator {
     protected _itemsPerPage: number = 10;
     protected _currentPage: number = 1;
 
-    constructor(
-        itemsTotal: number,
-        itemsPerPage: number = 10,
-        currentPage: number = 1
-    ) {
+    constructor(itemsTotal: number, itemsPerPage: number = 10, currentPage: number = 1) {
         this.itemsTotal = itemsTotal;
         this.itemsPerPage = itemsPerPage;
         this.currentPage = currentPage;

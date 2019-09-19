@@ -2,10 +2,7 @@
  * @param len
  * @param prefix
  */
-export function mmGetRandomAlphaNumStr(
-    len: number,
-    prefix: string = ''
-): string {
+export function mmGetRandomAlphaNumStr(len: number, prefix: string = ''): string {
     let salt = '';
     while (salt.length < len) {
         salt += Math.random()

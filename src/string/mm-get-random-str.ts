@@ -13,8 +13,7 @@ export function mmGetRandomStr(options?: {
     options = Object.assign(
         {
             length: 8,
-            charset:
-                'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+            charset: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
             readable: false,
             unique: false,
             prefix: '',

@@ -260,10 +260,7 @@ export class BaseModel<TData extends BaseModelData> {
     protected _maybeMarkKeyDirty(k, oldRawValue) {
         let newRawValue = this._data[k];
         // if (oldRawValue !== newRawValue && -1 === this._dirtyKeys.indexOf(k)) {
-        if (
-            !isEqual(oldRawValue, newRawValue) &&
-            -1 === this._dirtyKeys.indexOf(k)
-        ) {
+        if (!isEqual(oldRawValue, newRawValue) && -1 === this._dirtyKeys.indexOf(k)) {
             this._dirtyKeys.push(k);
         }
         return this;
@@ -348,10 +345,7 @@ export class BaseModel<TData extends BaseModelData> {
 
         val = JSON.stringify(val);
 
-        if (
-            val === void 0 ||
-            val === 'null' /*|| val === '{}' || isEmptyObject(val)*/
-        ) {
+        if (val === void 0 || val === 'null' /*|| val === '{}' || isEmptyObject(val)*/) {
             val = null;
         }
 

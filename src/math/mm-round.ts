@@ -1,4 +1,3 @@
-
 /**
  * http://www.jacklmoore.com/notes/rounding-in-javascript/
  * Rounding Errors
@@ -19,9 +18,7 @@
  * @returns {Number}
  */
 export function mmRound(value, decimals = 0): number {
-    return Number(
-        Math.round((value + 'e' + decimals) as any) + 'e-' + decimals
-    );
+    return Number(Math.round((value + 'e' + decimals) as any) + 'e-' + decimals);
 }
 
 /**

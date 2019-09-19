@@ -88,8 +88,7 @@ var MMDateFormatter = /** @class */ (function () {
         };
         var ZZ = function () {
             return (TZOffset > 0 ? '-' : '+') +
-                pad(Math.floor(Math.abs(TZOffset) / 60) * 100 +
-                    (Math.abs(TZOffset) % 60), 4);
+                pad(Math.floor(Math.abs(TZOffset) / 60) * 100 + (Math.abs(TZOffset) % 60), 4);
         };
         var replaceMap = {
             // YY	18	Two-digit year
