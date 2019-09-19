@@ -83,7 +83,7 @@ var MMDateFormatter = /** @class */ (function () {
         var Milliseconds = date[_ + 'Milliseconds']();
         var TZOffset = utc ? 0 : date.getTimezoneOffset();
         var _i18n = function (k) {
-            var t = __assign({}, (MMDateFormatter.i18n[locale] || {}), (i18n || {}));
+            var t = __assign(__assign({}, (MMDateFormatter.i18n[locale] || {})), (i18n || {}));
             return t[k] || {};
         };
         var ZZ = function () {
@@ -262,10 +262,10 @@ var MMDateFormatter = /** @class */ (function () {
         var res = MMDateFormatter._diff(deltaSeconds);
         var isPast = date < compareTo;
         var _i18n = function (k, _val, _isPast) {
-            var t = __assign({}, ((MMDateFormatter.i18n[locale] || {}).relative || {}), (i18n || {}));
+            var t = __assign(__assign({}, ((MMDateFormatter.i18n[locale] || {}).relative || {})), (i18n || {}));
             return t[k] ? t[k](_val, _isPast) : k + "," + _val + "," + _isPast;
         };
-        return __assign({}, res, { isPast: isPast, isFuture: !isPast, localized: _i18n(res.type, res.value, isPast) });
+        return __assign(__assign({}, res), { isPast: isPast, isFuture: !isPast, localized: _i18n(res.type, res.value, isPast) });
     };
     // prettier-ignore
     MMDateFormatter.i18n = {

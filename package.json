@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "build": "npm run clean && tsc",
-    "test": "NODE_ENV=testing jest --watch --runInBand",
+    "test": "cross-env NODE_ENV=test jest --watch --runInBand",
     "prettier": "prettier --single-quote --trailing-comma es5 --tab-width 4 --arrow-parens always --write 'src/**/*.{js,jsx,ts,tsx,scss,json}'"
   },
   "repository": {
@@ -21,18 +21,23 @@
   },
   "homepage": "https://github.com/marianmeres/mm-ts-utils#readme",
   "dependencies": {
-    "@types/jest": "^23.3.13",
-    "@types/lodash": "^4.14.120",
-    "babel-jest": "^24.0.0",
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.138",
+    "babel-jest": "^24.9.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "@babel/preset-env": "^7.6.0",
+    "cross-env": "^6.0.0",
     "dotenv": "^6.2.0",
-    "jest": "^23.5.0",
-    "lodash": "^4.17.11",
-    "lodash-es": "^4.17.11",
-    "prettier": "^1.16.4",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^23.10.5",
-    "typescript": "^3.3.1"
+    "if-env": "^1.0.4",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.7.1",
+    "typescript": "^3.6.3"
   },
   "jest": {
     "verbose": false,

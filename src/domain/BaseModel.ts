@@ -98,7 +98,7 @@ export class BaseModel<TData extends BaseModelData> {
                 out[k] = this.get(k);
                 return out;
             },
-            {} as TData
+            {} as any
         );
     }
 
@@ -202,7 +202,7 @@ export class BaseModel<TData extends BaseModelData> {
     set(k, v) {
         let oldRawValue = this._data[k];
         // IMPORTANT: prefer setter if exists
-        this._hasSetterFor(k) ? (this[k] = v) : (this._data[k] = v);
+        this._hasSetterFor(k) ? (this[k] = v) : ((this._data as any)[k] = v);
         this._maybeMarkKeyDirty(k, oldRawValue);
         return this;
     }
@@ -225,7 +225,7 @@ export class BaseModel<TData extends BaseModelData> {
      */
     protected _set(k, v) {
         let oldRawValue = this._data[k];
-        this._data[k] = v;
+        (this._data as any)[k] = v;
         this._maybeMarkKeyDirty(k, oldRawValue);
         return this;
     }

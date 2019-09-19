@@ -228,7 +228,7 @@ var BaseModel = /** @class */ (function () {
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
             // ...If the value has a toJSON() method, it's responsible to define
             // what data will be serialized...
-            return __assign({}, out, { toJSON: function () { return JSON.stringify(out); } });
+            return __assign(__assign({}, out), { toJSON: function () { return JSON.stringify(out); } });
         }
         return out;
     };
