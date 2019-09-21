@@ -28,4 +28,5 @@ export * from './string/mm-parse-query';
 export * from './string/mm-replace-map';
 export * from './string/mm-trim';
 export * from './string/mm-ucfirst';
+export * from './string/mm-unaccent';
 export * from './string/mm-uid';

@@ -33,4 +33,5 @@ __export(require("./string/mm-parse-query"));
 __export(require("./string/mm-replace-map"));
 __export(require("./string/mm-trim"));
 __export(require("./string/mm-ucfirst"));
+__export(require("./string/mm-unaccent"));
 __export(require("./string/mm-uid"));
