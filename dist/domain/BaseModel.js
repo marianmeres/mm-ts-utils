@@ -14,8 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var isEqual_1 = __importDefault(require("lodash-es/isEqual"));
-var isPlainObject_1 = __importDefault(require("lodash-es/isPlainObject"));
+var isEqual_1 = __importDefault(require("lodash/isEqual"));
+var isPlainObject_1 = __importDefault(require("lodash/isPlainObject"));
 var mm_get_prototype_chain_1 = require("../misc/mm-get-prototype-chain");
 var isString = function (v) { return typeof v === 'string'; };
 /**

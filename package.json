@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/marianmeres/mm-ts-utils#readme",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "lodash-es": "^4.17.15"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",

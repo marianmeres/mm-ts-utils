@@ -3,8 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var find_1 = __importDefault(require("lodash-es/find"));
-// import { find } from 'lodash';
+var find_1 = __importDefault(require("lodash/find"));
 var BaseCollection = /** @class */ (function () {
     /**
      * @param {any[]} items

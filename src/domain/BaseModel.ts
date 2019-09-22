@@ -1,6 +1,6 @@
-import isEqual from 'lodash-es/isEqual';
-import isPlainObject from 'lodash-es/isPlainObject';
-// import { isEqual, isPlainObject } from 'lodash';
+import isEqual from 'lodash/isEqual';
+import isPlainObject from 'lodash/isPlainObject';
+
 import { JSONApiData } from '../misc/mm-types';
 import { mmGetPrototypeChain } from '../misc/mm-get-prototype-chain';
 
