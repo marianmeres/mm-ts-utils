@@ -3,9 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * creates quasi uuid
  * http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+ * @param length
+ * @param separator
  * @returns {string}
  */
-function mmUid(length) {
+function mmUid(length, separator) {
+    if (separator === void 0) { separator = '-'; }
     var s4 = function () {
         return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
@@ -14,7 +17,7 @@ function mmUid(length) {
     };
     if (!length) {
         // prettier-ignore
-        return (s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4());
+        return (s4() + s4() + separator + s4() + separator + s4() + separator + s4() + separator + s4() + s4() + s4());
     }
     // custom length
     var c = Math.ceil(length / 4);

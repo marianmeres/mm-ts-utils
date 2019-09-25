@@ -1,10 +1,9 @@
-import { mmUid } from './mm-uid';
+import { mmGetRandomAlphaNumStr } from './mm-get-random-alpha-num-str';
 
-test('`mmUid` works', () => {
-    let s = mmUid();
-    expect(s.length).toEqual(36);
-    expect(s === mmUid()).toBeFalsy();
-
-    expect(mmUid(5).length).toEqual(5);
-    expect(mmUid(5) === mmUid(5)).toBeFalsy();
+test('`mmGetRandomAlphaNumStr` works', () => {
+    let prefix = 'hey';
+    let len = 5;
+    let s = mmGetRandomAlphaNumStr(len, prefix);
+    expect(s.length).toEqual(len + prefix.length);
+    expect(s === mmGetRandomAlphaNumStr(len, prefix)).toBeFalsy();
 });
