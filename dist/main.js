@@ -21,6 +21,7 @@ __export(require("./misc/mm-apply-mixins"));
 __export(require("./misc/mm-delay"));
 __export(require("./misc/mm-get-prototype-chain"));
 __export(require("./misc/mm-paginator"));
+__export(require("./misc/mm-parse-url-regex"));
 __export(require("./misc/mm-sequence"));
 __export(require("./misc/mm-types"));
 __export(require("./string/mm-escape-regex"));

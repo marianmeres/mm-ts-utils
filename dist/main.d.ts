@@ -16,6 +16,7 @@ export * from './misc/mm-apply-mixins';
 export * from './misc/mm-delay';
 export * from './misc/mm-get-prototype-chain';
 export * from './misc/mm-paginator';
+export * from './misc/mm-parse-url-regex';
 export * from './misc/mm-sequence';
 export * from './misc/mm-types';
 export * from './string/mm-escape-regex';
