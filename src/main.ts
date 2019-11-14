@@ -20,7 +20,6 @@ export * from './misc/mm-apply-mixins';
 export * from './misc/mm-delay';
 export * from './misc/mm-get-prototype-chain';
 export * from './misc/mm-paginator';
-export * from './misc/mm-parse-url-regex';
 export * from './misc/mm-sequence';
 export * from './misc/mm-types';
 
@@ -31,6 +30,7 @@ export * from './string/mm-get-random-str';
 export * from './string/mm-hash-code';
 export * from './string/mm-nl2br';
 export * from './string/mm-parse-query';
+export * from './string/mm-parse-url-regex';
 export * from './string/mm-replace-map';
 export * from './string/mm-trim';
 export * from './string/mm-ucfirst';
