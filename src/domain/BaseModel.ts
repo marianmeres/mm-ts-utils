@@ -35,7 +35,7 @@ export class BaseModel<TData extends BaseModelData> {
      * @param data
      * @param {boolean} forceDirty
      */
-    constructor(data?: any, forceDirty: boolean = false) {
+    constructor(data?: Partial<TData>, forceDirty: boolean = false) {
         if (data && typeof data.toJSON === 'function') {
             data = data.toJSON();
         }

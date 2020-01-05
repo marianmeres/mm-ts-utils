@@ -8,7 +8,7 @@
     "clean": "rimraf dist/*",
     "build": "npm run clean && tsc",
     "test": "cross-env NODE_ENV=test jest --watch --runInBand",
-    "prettier": "prettier --print-width 90 --single-quote --trailing-comma es5 --tab-width 4 --arrow-parens always --write \"{src,scripts}/**/*.{js,jsx,ts,tsx,scss}\""
+    "prettier": "prettier --write \"{src,scripts}/**/*.{js,jsx,ts,tsx,scss}\""
   },
   "repository": {
     "type": "git",
@@ -24,19 +24,19 @@
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/lodash": "^4.14.138",
+    "@babel/preset-env": "^7.7.7",
+    "@types/jest": "^24.0.25",
+    "@types/lodash": "^4.14.149",
     "babel-jest": "^24.9.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "@babel/preset-env": "^7.6.0",
     "cross-env": "^6.0.0",
     "dotenv": "^6.2.0",
     "if-env": "^1.0.4",
     "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
     "prettier": "^1.18.2",
     "rimraf": "^2.7.1",
-    "typescript": "^3.6.3"
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4"
   },
   "jest": {
     "verbose": false,

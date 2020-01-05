@@ -24,7 +24,7 @@ export declare class BaseModel<TData extends BaseModelData> {
      * @param data
      * @param {boolean} forceDirty
      */
-    constructor(data?: any, forceDirty?: boolean);
+    constructor(data?: Partial<TData>, forceDirty?: boolean);
     /**
      * @param data
      * @returns {BaseModel}
