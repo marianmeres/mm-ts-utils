@@ -2,6 +2,10 @@ import { mmParseBoolean } from './mm-parse-boolean';
 
 test('mmParseBoolean works', () => {
 
+    // undefs/null
+    expect(mmParseBoolean(undefined)).toEqual(false);
+    expect(mmParseBoolean(null)).toEqual(false);
+
     // booleans
     expect(mmParseBoolean(true)).toEqual(true);
     expect(mmParseBoolean(false)).toEqual(false);
@@ -18,6 +22,7 @@ test('mmParseBoolean works', () => {
 
     expect(mmParseBoolean(0)).toEqual(false);
     expect(mmParseBoolean(0.00)).toEqual(false);
+    expect(mmParseBoolean(NaN)).toEqual(false);
 
     // ints/floats written as strings
     expect(mmParseBoolean('1')).toEqual(true);
@@ -50,4 +55,10 @@ test('mmParseBoolean works', () => {
     expect(mmParseBoolean('aasdf')).toEqual(false);
     expect(mmParseBoolean('OFF')).toEqual(false);
     expect(mmParseBoolean('diSAbled')).toEqual(false);
+
+    // anything else is truthy
+    expect(mmParseBoolean({})).toEqual(true);
+    expect(mmParseBoolean(new Date)).toEqual(true);
+    expect(mmParseBoolean(new RegExp('foo'))).toEqual(true);
+    expect(mmParseBoolean(() => void 0)).toEqual(true);
 });
