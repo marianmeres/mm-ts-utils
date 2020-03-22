@@ -36,7 +36,7 @@ export declare class BaseModel<TData extends BaseModelData> {
     /**
      * @private
      */
-    get _defaults(): TData;
+    protected get _defaults(): TData;
     /**
      *
      */

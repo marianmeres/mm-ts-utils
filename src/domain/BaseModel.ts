@@ -40,9 +40,10 @@ export class BaseModel<TData extends BaseModelData> {
             data = data.toJSON();
         }
 
-        this._data = Object.assign({}, this._defaults); // dolezity uvodny init...
+        // important init - make sure keys exist...
+        this._data = Object.assign({}, this._defaults);
 
-        this.populate(Object.assign({}, this._defaults, data || {})); // populate via setters
+        this.populate(data || {}); // populate via setters
         this.resetDirty();
 
         if (forceDirty) {
@@ -84,7 +85,7 @@ export class BaseModel<TData extends BaseModelData> {
     /**
      * @private
      */
-    get _defaults(): TData {
+    protected get _defaults(): TData {
         // throw new Error('Method _defaults must be overidden in extended models');
         return BaseModel.defaults() as TData;
     }

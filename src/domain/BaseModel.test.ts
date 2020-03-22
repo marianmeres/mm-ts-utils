@@ -1,4 +1,5 @@
 import { BaseModel, BaseModelData } from './BaseModel';
+import { mmDelay } from '../misc/mm-delay';
 
 class Data implements BaseModelData {
     id: string;
@@ -28,6 +29,42 @@ class Foo extends BaseModel<Data> {
         };
     }
 }
+
+class BarData implements BaseModelData {
+    id: string;
+    created: Date;
+}
+
+class Bar extends BaseModel<BarData> {
+    readonly entityType = 'bar';
+
+    get created() {
+        return this._get('created');
+    }
+
+    set created(v) {
+        this._set('created', v ? new Date(v) : null);
+    }
+
+    get _defaults() {
+        return Bar.defaults();
+    }
+    
+    static defaults() {
+        return Object.assign({}, BaseModel.defaults(), {
+            created: new Date(),
+        });
+    }
+}
+
+test('constructor sanity check', async () => {
+    const now = new Date();
+    const b = new Bar();
+    await mmDelay(10);
+    expect(now).toEqual(b.created);
+    await mmDelay(10);
+    expect(now).toEqual(b.created);
+});
 
 test('is dirty sanity check', () => {
     let m = new Foo({ name: 'bar' });

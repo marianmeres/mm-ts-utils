@@ -36,8 +36,9 @@ var BaseModel = /** @class */ (function () {
         if (data && typeof data.toJSON === 'function') {
             data = data.toJSON();
         }
-        this._data = Object.assign({}, this._defaults); // dolezity uvodny init...
-        this.populate(Object.assign({}, this._defaults, data || {})); // populate via setters
+        // important init - make sure keys exist...
+        this._data = Object.assign({}, this._defaults);
+        this.populate(data || {}); // populate via setters
         this.resetDirty();
         if (forceDirty) {
             this.markDirty();
