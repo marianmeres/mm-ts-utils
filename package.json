@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/marianmeres/mm-ts-utils#readme",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
