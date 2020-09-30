@@ -20,3 +20,10 @@ test('`mmReplaceMap` works3 (ignore case)', () => {
     let str = '/api/some/:USERID/foo/:SoMe';
     expect(mmReplaceMap(str, map, true)).toEqual('/api/some/123/');
 });
+
+test('`mmReplaceMap` works4 (function)', () => {
+    // note: keys in map must be lowercased
+    let map = { 'hey': () => 'ho' };
+    let str = 'hey';
+    expect(mmReplaceMap(str, map, true)).toEqual('ho');
+});

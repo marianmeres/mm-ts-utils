@@ -17,7 +17,7 @@ export function mmReplaceMap(str, map, ignoreCase = false) {
         if (ignoreCase) {
             match = match.toLowerCase();
         }
-        let replaced = map[match];
+        let replaced = typeof map[match] === 'function' ? map[match]() : map[match];
         if (replaced === null || replaced === void 0) {
             return '';
         }
