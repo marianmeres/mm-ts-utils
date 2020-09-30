@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmParseQuery = void 0;
 /**
  * This function parses ampersand-separated name=value argument pairs from
  * the query string of the URL. It stores the name=value pairs in

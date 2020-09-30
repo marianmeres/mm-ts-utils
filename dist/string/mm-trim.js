@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmTrim = void 0;
 /**
  * http://locutus.io/php/trim/
  * @param str

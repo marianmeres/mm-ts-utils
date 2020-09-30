@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmFormatMoney = void 0;
 /**
  * credit: somewhere I don't remember...
  * @param amount

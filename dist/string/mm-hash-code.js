@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmHashCode = void 0;
 // http://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
 // https://stackoverflow.com/questions/6122571/simple-non-secure-hash-function-for-javascript/8831937
 function mmHashCode(str) {

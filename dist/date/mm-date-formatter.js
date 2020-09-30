@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MMDateFormatter = void 0;
 var mm_is_valid_date_1 = require("./mm-is-valid-date");
 var mm_escape_regex_1 = require("../string/mm-escape-regex");
 var MMDateFormatter = /** @class */ (function () {
@@ -31,7 +32,7 @@ var MMDateFormatter = /** @class */ (function () {
         get: function () {
             return this._date;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     /**

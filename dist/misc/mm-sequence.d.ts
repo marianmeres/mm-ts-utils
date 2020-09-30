@@ -1,5 +1,5 @@
 export declare const mmSequence: (prefix?: string) => {
     reset: () => any;
-    current: () => string | number;
-    next: () => string | number;
+    current: () => number | string;
+    next: () => number | string;
 };

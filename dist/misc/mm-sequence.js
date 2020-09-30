@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmSequence = void 0;
 exports.mmSequence = (function () {
     var _counters = {};
     return function (prefix) {

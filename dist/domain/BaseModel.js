@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseModel = void 0;
 var isEqual_1 = __importDefault(require("lodash/isEqual"));
 var isPlainObject_1 = __importDefault(require("lodash/isPlainObject"));
 var mm_get_prototype_chain_1 = require("../misc/mm-get-prototype-chain");
@@ -72,7 +73,7 @@ var BaseModel = /** @class */ (function () {
         set: function (v) {
             this._set('id', v);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(BaseModel.prototype, "_defaults", {
@@ -83,7 +84,7 @@ var BaseModel = /** @class */ (function () {
             // throw new Error('Method _defaults must be overidden in extended models');
             return BaseModel.defaults();
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     /**
@@ -277,7 +278,7 @@ var BaseModel = /** @class */ (function () {
         get: function () {
             return this._dirtyKeys;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     /**

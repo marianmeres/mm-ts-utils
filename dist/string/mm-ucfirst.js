@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmUcfirst = void 0;
 /**
  * @param str
  * @returns {string}

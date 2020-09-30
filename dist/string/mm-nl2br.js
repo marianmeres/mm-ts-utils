@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmNl2br = void 0;
 /**
  * http://phpjs.org/functions/nl2br/
  * @param str

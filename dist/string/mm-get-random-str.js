@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmGetRandomStr = void 0;
 /**
  * inspiration: https://github.com/klughammer/node-randomstring
  * @param options

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MmPaginator = void 0;
 /**
  * Nothing fancy, just basic calculations.
  */
@@ -20,7 +21,7 @@ var MmPaginator = /** @class */ (function () {
         set: function (v) {
             this._itemsTotal = this._assertNumber(v, 0);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(MmPaginator.prototype, "itemsPerPage", {
@@ -30,7 +31,7 @@ var MmPaginator = /** @class */ (function () {
         set: function (v) {
             this._itemsPerPage = Math.max(1, this._assertNumber(v));
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(MmPaginator.prototype, "currentPage", {
@@ -40,7 +41,7 @@ var MmPaginator = /** @class */ (function () {
         set: function (v) {
             this._currentPage = Math.max(1, this._assertNumber(v));
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     MmPaginator.prototype._assertNumber = function (val, fallback) {
@@ -52,7 +53,7 @@ var MmPaginator = /** @class */ (function () {
         get: function () {
             return Math.ceil(this.itemsTotal / this.itemsPerPage);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     /**
@@ -86,14 +87,14 @@ var MmPaginator = /** @class */ (function () {
         get: function () {
             return this.getOffsetByPage(null);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(MmPaginator.prototype, "limit", {
         get: function () {
             return this.itemsPerPage;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     MmPaginator.prototype.isOutOfBounds = function (page) {
@@ -112,7 +113,7 @@ var MmPaginator = /** @class */ (function () {
         get: function () {
             return this.getNextPage(null);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     MmPaginator.prototype.getPreviousPage = function (page) {
@@ -125,21 +126,21 @@ var MmPaginator = /** @class */ (function () {
         get: function () {
             return this.getPreviousPage(null);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(MmPaginator.prototype, "lastPage", {
         get: function () {
             return this.pageCount;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(MmPaginator.prototype, "firstPage", {
         get: function () {
             return 1;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     MmPaginator.prototype.isLastPage = function (page) {

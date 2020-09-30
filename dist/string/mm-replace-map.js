@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.mmReplaceMap = void 0;
 var mm_escape_regex_1 = require("./mm-escape-regex");
 /**
  * https://stackoverflow.com/questions/10045122/replace-many-values-in-a-string-based-on-search-replace-pairs
@@ -19,7 +20,7 @@ function mmReplaceMap(str, map, ignoreCase) {
         if (ignoreCase) {
             match = match.toLowerCase();
         }
-        var replaced = map[match];
+        var replaced = typeof map[match] === 'function' ? map[match]() : map[match];
         if (replaced === null || replaced === void 0) {
             return '';
         }
